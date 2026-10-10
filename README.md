@@ -287,11 +287,11 @@ For each companion, record:
 
 For each item, mark `Completed`, `Failed`, `In progress`, `Skipped`, or `Unknown`.
 
-- [ ] Auntie Ethel / hag
+- [Completed] Auntie Ethel / hag
 - [ ] Zhentarim missing shipment
 - [ ] Necromancy of Thay
 - [ ] Blood of Lathander
-- [ ] Adamantine Forge crafting
+- [Completed] Adamantine Forge crafting
 - [ ] Deep gnome rescue
 - [ ] Tiefling refugee quests
 - [ ] Art Cullagh / Lift the Shadow Curse
