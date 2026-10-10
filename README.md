@@ -27,10 +27,8 @@
 - 
 
 ### 1.2 The Absolute
-- What have we learned about the Absolute and its followers?
-#### Absolute followers are called  true souls
-- Who appears to lead the cult in this region?
-#### Kaethric Thorm
+- What have we learned about the Absolute and its followers? Absolute followers are called  true souls
+- Who appears to lead the cult in this region? Kaethric Thorm
 - What evidence links the cult to the tadpoles?
 - What is our current goal regarding the Absolute?
 
