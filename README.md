@@ -1,73 +1,354 @@
-# Trip Lodging Options
+from pathlib import Path
 
-Dates searched: **August 7–11, 2026**  
-Group/room context from links: **2 adults / 4 nights** where available
+content = """# Baldur's Gate 3 — Multiplayer Campaign Recap Worksheet
 
-This README keeps the original booking URLs hidden behind short, readable links and groups options by location. Prices shown are the prices visible in the supplied links or screenshot and may change.
-
----
-
-## Aruba
-
-### Airbnb Wishlist
-
-[Open Aruba Airbnb Wishlist](https://www.airbnb.com/wishlists/2068426383)
-
-| Lead Picture | Area | Listing | Rating | Screenshot Price |
-|---|---:|---|---:|---:|
-| <img src="travel_readme_assets/aruba_airbnb_villa_los_flamingos.png" alt="Villa Los Flamingos" width="220"> | Noord | Villa Los Flamingos — Private, 1 min to beach | 4.95 | $1,085 / 4 nights |
-| <img src="travel_readme_assets/aruba_airbnb_palm_hideout.png" alt="Aruba Palm Hideout" width="220"> | Noord | Aruba Palm Hideout — 3 min to beach | 4.93 | $837 / 4 nights |
-| <img src="travel_readme_assets/aruba_airbnb_oranjestad_pool.png" alt="Stylish and Sunny Gem" width="220"> | Oranjestad | Stylish & Sunny Gem — private pool | 5.0 | $890 / 4 nights |
-| <img src="travel_readme_assets/aruba_airbnb_noord_pool.png" alt="Noord private pool apartment" width="220"> | Noord | Apartment with private pool | 5.0 | Price not visible |
-| <img src="travel_readme_assets/aruba_airbnb_ocean_view_condo_1.png" alt="Noord ocean view condo" width="220"> | Noord | Ocean-view condo | 4.72 | Price not visible |
-| <img src="travel_readme_assets/aruba_airbnb_ocean_view_condo_2.png" alt="Noord ocean view condo 2" width="220"> | Noord | Ocean-view condo | 4.73 | Price not visible |
-
-### Expedia / Hotel Options
-
-| Lead Picture | Area | Option | Price from supplied link |
-|---|---:|---|---:|
-| <img src="travel_readme_assets/expedia_renaissance_wind_creek_aruba.jpg" alt="Renaissance Wind Creek Aruba Resort" width="220"> | Oranjestad | [Renaissance Wind Creek Aruba Resort](https://www.expedia.com/Oranjestad-Hotels-Renaissance-Wind-Creek-Aruba-Resort.h28399.Hotel-Information?chkin=2026-08-07&chkout=2026-08-11&x_pwa=1&rfrr=HSR&pwa_ts=1779930518792&referrerUrl=aHR0cHM6Ly93d3cuZXhwZWRpYS5jb20vSG90ZWwtU2VhcmNo&useRewards=false&rm1=a2&regionId=450&destination=Oranjestad%2C+Aruba&destType=MARKET&latLong=12.520075%2C-70.036972&price=-3&price=2500&sort=RECOMMENDED&top_dp=2398&top_cur=USD&userIntent=&selectedRoomType=212410192&selectedRatePlan=405397103&categorySearch=any_option&searchId=f2b5536e-e1f7-452d-afb2-94f13341cffb) | ~$2,398 |
-| <img src="travel_readme_assets/expedia_radisson_blu_aruba.jpg" alt="Radisson BLU Aruba" width="220"> | Noord | [Radisson BLU Aruba](https://www.expedia.com/Noord-Hotels-Radisson-BLU-Aruba.h54138159.Hotel-Information?chkin=2026-08-07&chkout=2026-08-11&x_pwa=1&rfrr=HSR&pwa_ts=1779930519095&referrerUrl=aHR0cHM6Ly93d3cuZXhwZWRpYS5jb20vSG90ZWwtU2VhcmNo&useRewards=false&rm1=a2&regionId=450&destination=Oranjestad%2C+Aruba&destType=MARKET&neighborhoodId=9306&latLong=12.520075%2C-70.036972&price=-3&price=2500&sort=RECOMMENDED&top_dp=1585&top_cur=USD&userIntent=&selectedRoomType=325609198&selectedRatePlan=398658098&categorySearch=any_option&searchId=f2b5536e-e1f7-452d-afb2-94f13341cffb) | ~$1,585 |
-| <img src="travel_readme_assets/expedia_amsterdam_manor_beach_resort.jpg" alt="Amsterdam Manor Beach Resort" width="220"> | Noord / Eagle Beach | [Amsterdam Manor Beach Resort](https://www.expedia.com/Noord-Hotels-Amsterdam-Manor-Beach-Resort.h78298.Hotel-Information?chkin=2026-08-07&chkout=2026-08-11&x_pwa=1&rfrr=HSR&pwa_ts=1779930519093&referrerUrl=aHR0cHM6Ly93d3cuZXhwZWRpYS5jb20vSG90ZWwtU2VhcmNo&useRewards=false&rm1=a2&regionId=450&destination=Oranjestad%2C+Aruba&destType=MARKET&neighborhoodId=810285230488739840&latLong=12.520075%2C-70.036972&price=-3&price=2500&sort=RECOMMENDED&top_dp=1771&top_cur=USD&userIntent=&selectedRoomType=3315&selectedRatePlan=399512567&categorySearch=any_option&searchId=f2b5536e-e1f7-452d-afb2-94f13341cffb) | ~$1,771 |
-| <img src="travel_readme_assets/expedia_radisson_blu_aruba.jpg" alt="Radisson BLU Aruba duplicate" width="220"> | Noord | [Radisson BLU Aruba — duplicate saved link](https://www.expedia.com/Noord-Hotels-Radisson-BLU-Aruba.h54138159.Hotel-Information?chkin=2026-08-07&chkout=2026-08-11&x_pwa=1&rfrr=HSR&pwa_ts=1779930519101&referrerUrl=aHR0cHM6Ly93d3cuZXhwZWRpYS5jb20vSG90ZWwtU2VhcmNo&useRewards=false&rm1=a2&regionId=450&destination=Oranjestad%2C+Aruba&destType=MARKET&neighborhoodId=9306&latLong=12.520075%2C-70.036972&price=-3&price=2500&sort=RECOMMENDED&top_dp=1585&top_cur=USD&userIntent=&selectedRoomType=325609198&selectedRatePlan=398658098&categorySearch=any_option&searchId=f2b5536e-e1f7-452d-afb2-94f13341cffb) | ~$1,585 |
-| <img src="travel_readme_assets/expedia_embassy_suites_aruba.jpg" alt="Embassy Suites by Hilton Aruba Resort" width="220"> | Noord | [Embassy Suites by Hilton Aruba Resort](https://www.expedia.com/Noord-Hotels-Embassy-Suites-By-Hilton-Aruba-Resort.h76165797.Hotel-Information?chkin=2026-08-07&chkout=2026-08-11&x_pwa=1&rfrr=HSR&pwa_ts=1779930394390&referrerUrl=aHR0cHM6Ly93d3cuZXhwZWRpYS5jb20vSG90ZWwtU2VhcmNo&useRewards=false&rm1=a2&regionId=450&destination=Oranjestad%2C+Aruba&destType=MARKET&neighborhoodId=9306&latLong=12.520075%2C-70.036972&sort=RECOMMENDED&top_dp=1887&top_cur=USD&userIntent=&selectedRoomType=316284250&selectedRatePlan=389911291&categorySearch=any_option&searchId=431e5140-837c-4880-9202-b25eb0d2db07) | ~$1,887 |
+> **Purpose:** Reconstruct our multiplayer campaign story and major choices, then use the completed outline to generate a concise session cheat sheet.
+>
+> **Spoiler boundary:** Only cover events up to our current checkpoint at Moonrise Towers. Do not include future plot reveals.
+>
+> **How to fill this in:** Use short answers. Write `Unknown` when we don't remember, `Unverified` when we suspect something but haven't checked, and `Disputed` if players remember events differently. Don't guess to fill gaps.
 
 ---
 
-## Bahamas
+## 0. Current Checkpoint
 
-### Nassau
+- **Current location:** Moonrise Towers, Act 2
+- **Current situation:** We entered Moonrise pretending to serve the Absolute. We saw Ketheric Thorm introduced and witnessed a judgment scene involving Minthara, who was taken away.
+- **Prison:** A party member was caught trespassing and imprisoned. We freed that party member and other prisoners, killed the prison guards and warden, and remained hidden from the wider tower.
+- **Ketheric:** We spoke to him. We witnessed his apparent immortality, and learned that his power seems to come from an external source possibly connected to the Absolute.
+- **Still to fill in:** Which prisoners escaped, what we learned in the conversation with Ketheric, and whether we learned anything specific about the Nightsong.
 
-| Lead Picture | Area | Option | Price from supplied link |
-|---|---:|---|---:|
-| <img src="travel_readme_assets/expedia_british_colonial_nassau.jpg" alt="British Colonial Nassau" width="220"> | Downtown Nassau | [British Colonial Nassau](https://www.expedia.com/Nassau-Hotels-British-Colonial-Nassau.h436224.Hotel-Information?chkin=2026-08-07&chkout=2026-08-11&x_pwa=1&rfrr=HSR&pwa_ts=1779931026244&referrerUrl=aHR0cHM6Ly93d3cuZXhwZWRpYS5jb20vSG90ZWwtU2VhcmNo&useRewards=false&rm1=a2&regionId=6139075&destination=Nassau%2C%20Bahamas%20%28NAS-All%20Airports%29&destType=MARKET&neighborhoodId=3000664963&latLong=25.043431%2C-77.422559&sort=RECOMMENDED&top_dp=1263&top_cur=USD&userIntent=&selectedRoomType=323724289&selectedRatePlan=407165980&categorySearch=any_option&searchId=a0662e4d-69d5-40b1-96ab-bb6b1548b874) | ~$1,263 |
-| <img src="travel_readme_assets/expedia_grand_hyatt_baha_mar.jpg" alt="Grand Hyatt Baha Mar" width="220"> | Cable Beach / Baha Mar | [Grand Hyatt Baha Mar](https://www.expedia.com/Nassau-Hotels-Grand-Hyatt-Baha-Mar.h7779293.Hotel-Information?chkin=2026-08-07&chkout=2026-08-11&x_pwa=1&rfrr=HSR&pwa_ts=1779931026218&referrerUrl=aHR0cHM6Ly93d3cuZXhwZWRpYS5jb20vSG90ZWwtU2VhcmNo&useRewards=false&rm1=a2&regionId=6139075&destination=Nassau%2C+Bahamas+%28NAS-All+Airports%29&destType=MARKET&latLong=25.043431%2C-77.422559&sort=RECOMMENDED&top_dp=1706&top_cur=USD&userIntent=&selectedRoomType=202003255&selectedRatePlan=397907951&categorySearch=any_option&searchId=a0662e4d-69d5-40b1-96ab-bb6b1548b874) | ~$1,706 |
-| <img src="travel_readme_assets/expedia_sandyport_beach_resort.jpg" alt="Sandyport Beach Resort" width="220"> | Nassau / Cable Beach area | [Sandyport Beach Resort](https://www.expedia.com/Nassau-Hotels-Sandyport-Beach-Resort.h1038363.Hotel-Information?chkin=2026-08-07&chkout=2026-08-11&x_pwa=1&rfrr=HSR&pwa_ts=1779931026215&referrerUrl=aHR0cHM6Ly93d3cuZXhwZWRpYS5jb20vSG90ZWwtU2VhcmNo&useRewards=false&rm1=a2&regionId=6139075&destination=Nassau%2C+Bahamas+%28NAS-All+Airports%29&destType=MARKET&latLong=25.043431%2C-77.422559&sort=RECOMMENDED&top_dp=1167&top_cur=USD&userIntent=&selectedRoomType=27445&selectedRatePlan=246052854&categorySearch=any_option&searchId=a0662e4d-69d5-40b1-96ab-bb6b1548b874) | ~$1,167 |
+## 1. Main Story: Tadpoles, the Absolute, and the Guardian
 
----
+### 1.1 Our original problem
+- How did we escape the Nautiloid?
+- Who was in our party early on?
+- What do we currently know about the mind flayer tadpoles?
+- What have we tried to do about them?
 
-## Florida
+**Our notes:**
+- 
 
-### Marco Island / Naples Area
+### 1.2 The Absolute
+- What have we learned about the Absolute and its followers?
+- Who appears to lead the cult in this region?
+- What evidence links the cult to the tadpoles?
+- What is our current goal regarding the Absolute?
 
-| Lead Picture | Area | Option | Price from supplied link |
-|---|---:|---|---:|
-| <img src="travel_readme_assets/expedia_holiday_inn_sunset_cove_resort.jpg" alt="Holiday Inn Club Vacations Sunset Cove Resort" width="220"> | Marco Island / Naples Area | [Holiday Inn Club Vacations Sunset Cove Resort](https://www.expedia.com/Naples-Hotels-Holiday-Inn-Club-Vacations-Sunset-Cove-Resort.h1574073.Hotel-Information?chkin=2026-08-07&chkout=2026-08-11&x_pwa=1&rfrr=HSR&pwa_ts=1779931800164&referrerUrl=aHR0cHM6Ly93d3cuZXhwZWRpYS5jb20vSG90ZWwtU2VhcmNo&useRewards=false&rm1=a2&regionId=8812&destination=Marco+Island%2C+Florida%2C+United+States+of+America&destType=MARKET&latLong=25.939741%2C-81.707535&sort=RECOMMENDED&top_dp=1572&top_cur=USD&semcid=US.UB.GOOGLE.DT-c-EN.HOTEL&semdtl=a111798313764.b1120347467899.g1kwd-26333160.e1c.m1CjwKCAjwrNrQBhBjEiwAoR4VO0VRvN4Wl2JwuO-9FGoqfWSxg0h2PaMpGeOlyVRC4UAB9o90m3QX7xoCusYQAvD_BwE.r1.c1.j19007473.k1.d1720129073159.h1e.i1.l1.n1.o1.p1.q1.s1marco+island+florida.t1.x1.f1.u1.v1.w1&userIntent=&selectedRoomType=200112950&selectedRatePlan=380812234&categorySearch=any_option&searchId=78101954-6435-412b-b571-773a1b79879b) | ~$1,572 |
-| <img src="travel_readme_assets/expedia_hilton_marco_island_beach_resort.jpg" alt="Hilton Marco Island Beach Resort" width="220"> | Marco Island | [Hilton Marco Island Beach Resort](https://www.expedia.com/Naples-Hotels-Hilton-Marco-Island-Beach-Resort.h17575.Hotel-Information?chkin=2026-08-07&chkout=2026-08-11&x_pwa=1&rfrr=HSR&pwa_ts=1779931800160&referrerUrl=aHR0cHM6Ly93d3cuZXhwZWRpYS5jb20vSG90ZWwtU2VhcmNo&useRewards=false&rm1=a2&regionId=8812&destination=Marco+Island%2C+Florida%2C+United+States+of+America&destType=MARKET&neighborhoodId=904316222831964160&latLong=25.939741%2C-81.707535&sort=RECOMMENDED&top_dp=1256&top_cur=USD&semcid=US.UB.GOOGLE.DT-c-EN.HOTEL&semdtl=a111798313764.b1120347467899.g1kwd-26333160.e1c.m1CjwKCAjwrNrQBhBjEiwAoR4VO0VRvN4Wl2JwuO-9FGoqfWSxg0h2PaMpGeOlyVRC4UAB9o90m3QX7xoCusYQAvD_BwE.r1.c1.j19007473.k1.d1720129073159.h1e.i1.l1.n1.o1.p1.q1.s1marco+island+florida.t1.x1.f1.u1.v1.w1&userIntent=&selectedRoomType=210901930&selectedRatePlan=395696669&categorySearch=any_option&searchId=78101954-6435-412b-b571-773a1b79879b) | ~$1,256 |
+**Our notes:**
+- 
 
----
+### 1.3 Dream Visitor / Guardian / Astral Prism
+- What did the Dream Visitor tell us before or after the Crèche?
+- What do we remember about the Astral Prism?
+- What did the Visitor ask us to do next?
+- What do we know, and what remains uncertain?
 
-## Quick Comparison
+**Our notes:**
+- 
 
-| Location | Lower-cost options from provided links | Higher-cost / premium options from provided links |
-|---|---|---|
-| Aruba | Airbnb Palm Hideout, Oranjestad Private Pool, Radisson BLU | Renaissance Wind Creek, Embassy Suites, Amsterdam Manor |
-| Bahamas | Sandyport Beach Resort, British Colonial Nassau | Grand Hyatt Baha Mar |
-| Florida | Hilton Marco Island Beach Resort | Holiday Inn Club Vacations Sunset Cove Resort |
+### 1.4 Ketheric Thorm
+- What did we learn when we met Ketheric at Moonrise?
+- What did we witness that suggested he was immortal or invulnerable?
+- Who told us his power comes from another source?
+- What have we learned about the Nightsong, if anything?
 
-## Notes
+**Our notes:**
+- 
 
-- The Aruba Airbnb images are cropped from the screenshot you provided.
-- The hotel images are saved as local assets so the README can render without relying on remote image URLs.
-- The second Radisson BLU Aruba link appears to be a duplicate of the first Radisson BLU saved option.
-- Keep `README.md` and the `travel_readme_assets/` folder together when moving or opening the README.
+## 2. Act 1: Emerald Grove and Goblin Camp
+
+### 2.1 Emerald Grove
+- How did the conflict between the druids and tiefling refugees end?
+- What happened with Kagha and the ritual to seal the grove?
+- Did we rescue Halsin? What did he ask us to do?
+- Which tieflings survived or became important to us?
+
+**Known so far:** We saved the grove.
+
+**Our notes / details to verify:**
+- 
+
+### 2.2 Goblin leaders
+- What happened to Priestess Gut?
+- What happened to Dror Ragzlin?
+- What happened to Minthara?
+- Did we kill all three leaders? (Current recollection: yes.)
+- Did we complete any quests with Halsin or other goblins?
+
+**Known so far:** We killed all three goblin leaders, including Minthara.
+
+**Our notes:**
+- 
+
+### 2.3 Tiefling refugees and other Act 1 quests
+- What happened to Zevlor, Dammon, Alfira, Arabella, and other tieflings we remember?
+- Did we complete Auntie Ethel, Zhentarim, Necromancy of Thay, or other notable quests?
+- Which important NPCs did we help, kill, or antagonize?
+
+**Our notes:**
+- 
+
+## 3. Act 1: Underdark and Mountain Pass
+
+### 3.1 Underdark
+- Which areas did we explore (Myconid Colony, duergar camp, Grymforge, etc.)?
+- Did we meet Sovereign Spaw or Sovereign Glut?
+- Did we encounter Nere?
+- Did we rescue deep gnome slaves?
+- Did we reach the Adamantine Forge? Did we craft anything?
+- What happened to the duergar and deep gnomes?
+
+**Known so far:** We reached the Adamantine Forge.
+
+**Our notes:**
+- 
+
+### 3.2 Mountain Pass and Githyanki Crèche
+- Did we meet the Githyanki patrol and visit the Crèche?
+- What happened during the attempted tadpole cure?
+- What did we learn about Vlaakith?
+- Who was the Githyanki lieutenant who spoke to Lae'zel? (Likely Kith'rak Voss; verify if needed.)
+- What happened in the confrontation after we challenged the Crèche?
+- Did we obtain or investigate the Blood of Lathander?
+
+**Known so far:** We visited the Crèche, fought our way through after essentially raiding it, and learned the Githyanki were willing to kill infected people while investigating the tadpole.
+
+**Our notes:**
+- 
+
+### 3.3 The Astral Prism revelation
+- What did the Dream Visitor reveal inside the Astral Prism?
+- What did Vlaakith want us to do?
+- What did we learn about the Visitor's protection?
+- What did the Visitor ask us to do next?
+
+**Known so far:** There was a major revelation after the Crèche, followed by an urgent push to continue toward Baldur's Gate / investigate the Absolute at Moonrise.
+
+**Our notes:**
+- 
+
+## 4. Act 2: Shadow-Cursed Lands
+
+### 4.1 Entering the region
+- Did we enter through the Underdark route, Mountain Pass, or both?
+- How do we protect ourselves from the shadow curse?
+- Did we acquire a Moonlantern or another source of protection?
+- Which important characters and locations did we encounter?
+
+**Our notes:**
+- 
+
+### 4.2 Last Light Inn
+- Did we meet Jaheira and Isobel?
+- Did the inn remain safe?
+- What did we learn about the curse or the region?
+- Which quests did we start or finish here?
+
+**Known so far:** We visited Last Light Inn and it remained safe.
+
+**Our notes:**
+- 
+
+### 4.3 Halsin and lifting the shadow curse
+- We met Halsin at Last Light Inn.
+- We protected him while he opened a portal and defended it against shadow-corrupted enemies.
+- What was Halsin trying to retrieve or accomplish?
+- Did he return from the portal? Did we speak to him afterward?
+- What does the journal say about `Wake Up Art Cullagh` or `Lift the Shadow Curse`?
+- Did we meet Art Cullagh, and what happened?
+
+**Known so far:** We defended Halsin while he opened the portal. Whether the quest advanced afterward is unknown.
+
+**Our notes:**
+- 
+
+### 4.4 The Thorm family
+- Which Thorms did we encounter?
+- Did we kill Malus Thorm at the House of Healing?
+- Did we kill Gerringothe Thorm at the Tollhouse?
+- Did we kill Thisobald Thorm at the Waning Moon?
+- How did we defeat each one (combat, dialogue, or another method)?
+
+**Known so far:** We visited the House of Healing and killed the other Thorms except Ketheric.
+
+**Our notes:**
+- 
+
+### 4.5 Raphael and Yurgir
+- Where did Raphael approach us?
+- What did he tell us about Yurgir?
+- Did Astarion's scars or personal quest come up?
+- What happened in the Gauntlet of Shar?
+- Did we kill Yurgir? What else did we do in the Gauntlet?
+
+**Known so far:** We entered the dungeon near the House of Healing / Grand Mausoleum, encountered Yurgir, who was trapped in a situation connected to Raphael, and killed him.
+
+**Our notes:**
+- 
+
+## 5. Moonrise Towers
+
+### 5.1 Infiltration
+- How did we enter Moonrise?
+- What did we say or do to pretend to serve the Absolute?
+- What happened during Ketheric's introduction and Minthara's judgment?
+- What did we learn when speaking with Ketheric?
+- Did our cover remain intact?
+
+**Known so far:** We pretended to serve the Absolute, saw Ketheric introduced, saw Minthara taken away after a judgment scene, spoke to Ketheric, and remained hidden after the prison escape.
+
+**Our notes:**
+- 
+
+### 5.2 Prison escape
+- Which party member was imprisoned, and why?
+- Which prisoners did we free?
+- Did Wulbren Bongle escape?
+- Were any tiefling refugees among the prisoners?
+- Did we use a boat or another escape route?
+- What happened to the warden and guards?
+- Did the tower become hostile, or did our cover remain intact?
+
+**Known so far:** We freed a captured party member and other prisoners, killed the prison guards and warden, and stayed hidden from the wider tower.
+
+**Our notes:**
+- 
+
+### 5.3 Ketheric and the Absolute
+- What evidence did we see of Ketheric's apparent immortality?
+- Who explained that his power comes from another source?
+- What have we learned about the source?
+- What do we know about the True Souls and the Absolute's leadership?
+- What questions remain unanswered?
+
+**Our notes:**
+- 
+
+## 6. Companion Storylines
+
+Fill out the subsection for every companion who is recruited, in camp, or important to the campaign.
+
+For each companion, record:
+- Current personal goal:
+- Major revelations so far:
+- Decisions we made that affect them:
+- Important NPCs or locations tied to their quest:
+- Current journal quest status:
+- Unresolved questions:
+
+### 6.1 Shadowheart
+- What do we know about Shar and her memories?
+- What is her relationship to the Astral Prism?
+- Have we learned anything about the Nightsong?
+- Notes:
+
+### 6.2 Lae'zel
+- What did the Crèche reveal?
+- What did Voss tell her about Vlaakith?
+- Does she still trust Vlaakith?
+- Notes:
+
+### 6.3 Wyll
+- What do we know about Mizora and his pact?
+- Have we met Karlach? What did we decide?
+- Have we learned anything about his father?
+- Notes:
+
+### 6.4 Gale
+- What do we know about his magical condition?
+- Has he spoken about Mystra or met Elminster?
+- Notes:
+
+### 6.5 Astarion
+- What do we know about Cazador and his scars?
+- Did Raphael offer to explain the scars?
+- Was Astarion present for the Yurgir encounter?
+- Notes:
+
+### 6.6 Karlach
+- Have we recruited her?
+- What do we know about her infernal engine?
+- Did Dammon help repair or upgrade it?
+- Notes:
+
+### 6.7 Halsin
+- What did we learn about Thaniel and the shadow curse?
+- What happened after the portal defense?
+- Notes:
+
+### 6.8 Other companions / camp characters
+- Name:
+- Personal storyline:
+- Important decisions:
+- Current status:
+
+## 7. Other Major Choices and Side Quests
+
+For each item, mark `Completed`, `Failed`, `In progress`, `Skipped`, or `Unknown`.
+
+- [ ] Auntie Ethel / hag
+- [ ] Zhentarim missing shipment
+- [ ] Necromancy of Thay
+- [ ] Blood of Lathander
+- [ ] Adamantine Forge crafting
+- [ ] Deep gnome rescue
+- [ ] Tiefling refugee quests
+- [ ] Art Cullagh / Lift the Shadow Curse
+- [ ] Gauntlet of Shar
+- [ ] Other:
+  
+### Important choices
+- Who did we kill or spare?
+- Which bargains did we accept or reject?
+- Which allies did we help?
+- Which NPCs are hostile?
+- Which items or artifacts did we give away, keep, or destroy?
+
+**Our notes:**
+- 
+
+## 8. Current Party and Campaign State
+
+- Player characters and classes:
+- Companions in active party:
+- Companions at camp:
+- Important items / artifacts:
+- Active main quests:
+- Active companion quests:
+- Important NPCs to revisit:
+- Current objective:
+- Next-session plans:
+
+## 9. Unknowns to Verify In-Game
+
+Use this list to track details that could be checked in the journal, through camp dialogue, or by revisiting a location.
+
+- [ ] Which prisoners escaped Moonrise, including deep gnomes and tieflings
+- [ ] What happened after Halsin's portal defense
+- [ ] Exact details of the Dream Visitor's revelation
+- [ ] Exact dialogue and information from Ketheric
+- [ ] Which Thorms were killed and how
+- [ ] Whether we completed key Gauntlet of Shar objectives
+- [ ] Current status of each companion quest
+- [ ] Other:
+
+## 10. Instructions for Generating the Final Cheat Sheet
+
+After filling this worksheet, use the following request:
+
+> Turn the completed worksheet into a concise Baldur's Gate 3 multiplayer campaign recap. Keep the story strictly limited to the events recorded in the worksheet and do not spoil events beyond our current checkpoint. Separate confirmed events from uncertain details. Include:
+> 1. A chronological story timeline.
+> 2. A plain-English explanation of the main plot and our current objective.
+> 3. Major choices and their known consequences.
+> 4. A companion-by-companion status summary.
+> 5. Our current Moonrise Towers situation.
+> 6. A short next-session checklist.
+> 7. A separate list of unknowns worth checking in-game.
+>
+> Do not invent decisions, character outcomes, or quest completions. If something is unknown, label it unknown and suggest where in the journal, dialogue, or map we can verify it.
+"""
+
+path = Path("/mnt/data/BG3_Multiplayer_Campaign_README.md")
+path.write_text(content, encoding="utf-8")
+print(f"Created: {path}")
