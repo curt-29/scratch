@@ -1,12 +1,9 @@
-from pathlib import Path
 
-content = """# Baldur's Gate 3 — Multiplayer Campaign Recap Worksheet
+# Baldur's Gate 3 — Multiplayer Campaign Recap Worksheet
 
 > **Purpose:** Reconstruct our multiplayer campaign story and major choices, then use the completed outline to generate a concise session cheat sheet.
 >
 > **Spoiler boundary:** Only cover events up to our current checkpoint at Moonrise Towers. Do not include future plot reveals.
->
-> **How to fill this in:** Use short answers. Write `Unknown` when we don't remember, `Unverified` when we suspect something but haven't checked, and `Disputed` if players remember events differently. Don't guess to fill gaps.
 
 ---
 
@@ -31,7 +28,9 @@ content = """# Baldur's Gate 3 — Multiplayer Campaign Recap Worksheet
 
 ### 1.2 The Absolute
 - What have we learned about the Absolute and its followers?
+#### Absolute followers are called  true souls
 - Who appears to lead the cult in this region?
+#### Kaethric Thorm
 - What evidence links the cult to the tadpoles?
 - What is our current goal regarding the Absolute?
 
@@ -42,6 +41,7 @@ content = """# Baldur's Gate 3 — Multiplayer Campaign Recap Worksheet
 - What did the Dream Visitor tell us before or after the Crèche?
 - What do we remember about the Astral Prism?
 - What did the Visitor ask us to do next?
+####
 - What do we know, and what remains uncertain?
 
 **Our notes:**
