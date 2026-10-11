@@ -28,9 +28,9 @@ We've tried to get them removed but have decided to keep them
 
 ### 1.2 The Absolute
 - What have we learned about the Absolute and its followers?
-Followers with tad poles ar ecalled true souls
+#### Absolute followers are called  true souls
 - Who appears to lead the cult in this region?
-    Kaethric Thorm
+#### Kaethric Thorm
 - What evidence links the cult to the tadpoles?
     True souls have them and it causes them to not transform
 - What is our current goal regarding the Absolute?
@@ -156,10 +156,10 @@ Followers with tad poles ar ecalled true souls
 - 
 
 ### 4.3 Halsin and lifting the shadow curse
-- We met Halsin at Last Light Inn.
-- We protected him while he opened a portal and defended it against shadow-corrupted enemies.
-- What was Halsin trying to retrieve or accomplish?
-- Did he return from the portal? Did we speak to him afterward?
+- We met Halsin at Last Light Inn. Yes 
+- We protected him while he opened a portal and defended it against shadow-corrupted enemies. Yes
+- What was Halsin trying to retrieve or accomplish? Rid the land of the shadow touch curse
+- Did he return from the portal? Did we speak to him afterward? Yes, 
 - What does the journal say about `Wake Up Art Cullagh` or `Lift the Shadow Curse`?
 - Did we meet Art Cullagh, and what happened?
 
@@ -170,9 +170,9 @@ Followers with tad poles ar ecalled true souls
 
 ### 4.4 The Thorm family
 - Which Thorms did we encounter?
-- Did we kill Malus Thorm at the House of Healing?
-- Did we kill Gerringothe Thorm at the Tollhouse?
-- Did we kill Thisobald Thorm at the Waning Moon?
+- Did we kill Malus Thorm at the House of Healing? Yes, dies after being cut up by followers
+- Did we kill Gerringothe Thorm at the Tollhouse? Yes , dies after being given too many coins
+- Did we kill Thisobald Thorm at the Waning Moon? Yes, dies in combat after we fail check when drinking with him.
 - How did we defeat each one (combat, dialogue, or another method)?
 
 **Known so far:** We visited the House of Healing and killed the other Thorms except Ketheric.
@@ -181,10 +181,10 @@ Followers with tad poles ar ecalled true souls
 - 
 
 ### 4.5 Raphael and Yurgir
-- Where did Raphael approach us?
+- Where did Raphael approach us? Last light
 - What did he tell us about Yurgir?
 - Did Astarion's scars or personal quest come up?
-- What happened in the Gauntlet of Shar?
+- What happened in the Gauntlet of Shar? Yurgir is killed after we convince him there is no other way to stop his curse
 - Did we kill Yurgir? What else did we do in the Gauntlet?
 
 **Known so far:** We entered the dungeon near the House of Healing / Grand Mausoleum, encountered Yurgir, who was trapped in a situation connected to Raphael, and killed him.
@@ -195,11 +195,11 @@ Followers with tad poles ar ecalled true souls
 ## 5. Moonrise Towers
 
 ### 5.1 Infiltration
-- How did we enter Moonrise?
-- What did we say or do to pretend to serve the Absolute?
-- What happened during Ketheric's introduction and Minthara's judgment?
-- What did we learn when speaking with Ketheric?
-- Did our cover remain intact?
+- How did we enter Moonrise? From the house of healing adjacent entrance
+- What did we say or do to pretend to serve the Absolute? Pretended to serve absolute
+- What happened during Ketheric's introduction and Minthara's judgment? Kethric slays someone after forcing them to try to kill him. Minthara is taken away after we feign servitude
+- What did we learn when speaking with Ketheric? True Souls are linked to Kethrics immortality.
+- Did our cover remain intact? Yes
 
 **Known so far:** We pretended to serve the Absolute, saw Ketheric introduced, saw Minthara taken away after a judgment scene, spoke to Ketheric, and remained hidden after the prison escape.
 
@@ -207,7 +207,7 @@ Followers with tad poles ar ecalled true souls
 - 
 
 ### 5.2 Prison escape
-- Which party member was imprisoned, and why?
+- Which party member was imprisoned, and why? Peewum imprisoned for being caught trespassing
 - Which prisoners did we free?
 - Did Wulbren Bongle escape?
 - Were any tiefling refugees among the prisoners?
@@ -304,8 +304,8 @@ For each item, mark `Completed`, `Failed`, `In progress`, `Skipped`, or `Unknown
 - [ ] Other:
   
 ### Important choices
-- Who did we kill or spare?
-- Which bargains did we accept or reject?
+- Who did we kill or spare? Killed Golbin camp head bosses, Auntie Ethel, Githyanki in the creche, brother of Isobel ?? 
+- Which bargains did we accept or reject? Auntie Ethel paid the price on Curtis
 - Which allies did we help?
 - Which NPCs are hostile?
 - Which items or artifacts did we give away, keep, or destroy?
@@ -315,14 +315,14 @@ For each item, mark `Completed`, `Failed`, `In progress`, `Skipped`, or `Unknown
 
 ## 8. Current Party and Campaign State
 
-- Player characters and classes:
+- Player characters and classes: Paladin, Bard, Ranger, Cleric
 - Companions in active party:
-- Companions at camp:
+- Companions at camp: Wyll, karlach, withers, Gale, shadowheart, lazel, oathbreaker paladin guy
 - Important items / artifacts:
 - Active main quests:
 - Active companion quests:
 - Important NPCs to revisit:
-- Current objective:
+- Current objective: 
 - Next-session plans:
 
 ## 9. Unknowns to Verify In-Game
@@ -330,10 +330,15 @@ For each item, mark `Completed`, `Failed`, `In progress`, `Skipped`, or `Unknown
 Use this list to track details that could be checked in the journal, through camp dialogue, or by revisiting a location.
 
 - [ ] Which prisoners escaped Moonrise, including deep gnomes and tieflings
+    Deep gnomes and tieflings escaped ?? 
 - [ ] What happened after Halsin's portal defense
+   Thaniel body recovered dead ?
 - [ ] Exact details of the Dream Visitor's revelation
 - [ ] Exact dialogue and information from Ketheric
 - [ ] Which Thorms were killed and how
+      Gatekeeper Thorm killed after giving her too many gold coins
+      Barkeeper Killed after combat encounter where we drank with him but failed to entertain him with stories
+      House of healing Thorm killed during conversation by his owner followers ? 
 - [ ] Whether we completed key Gauntlet of Shar objectives
 - [ ] Current status of each companion quest
 - [ ] Other:
@@ -352,8 +357,3 @@ After filling this worksheet, use the following request:
 > 7. A separate list of unknowns worth checking in-game.
 >
 > Do not invent decisions, character outcomes, or quest completions. If something is unknown, label it unknown and suggest where in the journal, dialogue, or map we can verify it.
-"""
-
-path = Path("/mnt/data/BG3_Multiplayer_Campaign_README.md")
-path.write_text(content, encoding="utf-8")
-print(f"Created: {path}")
