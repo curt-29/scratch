@@ -18,29 +18,33 @@
 ## 1. Main Story: Tadpoles, the Absolute, and the Guardian
 
 ### 1.1 Our original problem
-- How did we escape the Nautiloid?
-- Who was in our party early on?
-- What do we currently know about the mind flayer tadpoles?
+- How did we escape the Nautiloid? Hijack controls and jumped from crash landing
+- Who was in our party early on? 
+- What do we currently know about the mind flayer tadpoles? Give us powers and take over 
 - What have we tried to do about them?
-
+We've tried to get them removed but have decided to keep them
 **Our notes:**
 - 
 
 ### 1.2 The Absolute
 - What have we learned about the Absolute and its followers?
-#### Absolute followers are called  true souls
+Followers with tad poles ar ecalled true souls
 - Who appears to lead the cult in this region?
-#### Kaethric Thorm
+    Kaethric Thorm
 - What evidence links the cult to the tadpoles?
+    True souls have them and it causes them to not transform
 - What is our current goal regarding the Absolute?
-
+  Blow it up
 **Our notes:**
 - 
 
 ### 1.3 Dream Visitor / Guardian / Astral Prism
 - What did the Dream Visitor tell us before or after the Crèche?
+    Go to Moonrise towers , then bauldurs gate
 - What do we remember about the Astral Prism?
+    Dream visitor resides in astral prism
 - What did the Visitor ask us to do next?
+
 ####
 - What do we know, and what remains uncertain?
 
@@ -49,6 +53,7 @@
 
 ### 1.4 Ketheric Thorm
 - What did we learn when we met Ketheric at Moonrise?
+    Immortal and his power comes from the nightsong
 - What did we witness that suggested he was immortal or invulnerable?
 - Who told us his power comes from another source?
 - What have we learned about the Nightsong, if anything?
